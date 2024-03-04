@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsla(269, 52%, 25%, 0.789);
+    --lt-violet2: hsl(281, 67%, 32%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+  
+    --vb-yellow: hsl(52, 100%, 62%);
+  
+  
+    --pl-white: hsl(0, 0%, 100%);
+  
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+    --dk-text: hsl(198, 20%, 13%);
+}
+
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5aa5ef;
+    background-image: linear-gradient(62deg, #0360bd 0%, #7a17d7 100%);
+}
+.container{
+    background-color: var(--lt-violet);
+    background-image: linear-gradient(72deg, #083ac2 20%, #480983 80%);
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    width: 26%;
+    border-radius: 15px;
+}
+
+
+.display-box{
+    width: 80%;
+}
+.display-password-container{
+    width: 100%;
+}
+h1{
+    color: var(--pl-white);
+    padding-bottom: 28px;
+    text-align: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+#passDisplay{
+    width: 86%;
+    background-color: var(--lt-violet2);
+    border: none;
+    height: 36px;
+    border-radius: 9px;
+    color: var(--vb-yellow);
+    font-size: 20px;
+}
+.copy-container{
+    position: relative;
+}
+.copyMsg{
+
+    display: none;
+    position: absolute;
+    top: -45px;
+    left: -1px;
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+    background-color: var(--lt-violet2);
+    color: var(--vb-yellow);
+    padding: 3px 5px;
+    border-radius: 14px;
+}
+.copyMsg.active{
+    display:inline-block;
+}
+.copyimg{
+    position: absolute;
+    bottom: -12px;
+    left: 20px;
+    background: transparent;
+    border-radius: 4px;
+}
+
+.slider{
+    appearance: none;
+    width:100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: var(--lt-violet);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(var(--vb-violet), var(--vb-violet));
+    background-repeat: no-repeat;
+    border:none;
+    outline:none;
+    z-index:-1;
+}
+
+.slider::-webkit-slider-thumb {
+    position:relative;
+    z-index:1;
+    appearance: none;
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color: var(--vb-yellow);
+    cursor:pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid var(--vb-yellow);
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.80);
+}
+
+
+.password-length{
+    justify-content: space-between;
+    padding-block: 10px;
+}
+.pl-text{
+    font-size: 18px;
+    color: var(--pl-white);
+}
+.pl-num{
+    color: var(--vb-yellow);
+    font-weight: 700;
+    font-size: 22px;
+}
+.checkboxes-container{
+    padding: 0 20px;
+    font-size: 18px;
+    color: rgb(220, 217, 217);
+}
+label{
+    font-family: cursive;
+}
+.checkbox{
+    padding-block: 2px;
+}
+.checkbox input{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--vb-cyan);
+    border-radius: 0.35rem;
+    position: relative;
+}
+
+.checkbox input:checked{
+    background-color: var(--vb-cyan);
+}
+.checkbox input:checked::before{
+    content: '✔';
+    position: absolute;
+    font-size: 1.05rem;
+    top: -20%;
+    left: 10%;
+    font-weight: 600;
+}
+
+.indicator{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.calculate-strength{
+    padding-block: 10px;
+    justify-content: space-between;
+    font-size: 18px;
+    color: var(--dk-text);
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    background-color: var(--lt-violet2);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: var(--vb-yellow);
+    border-bottom: 3px solid var(--vb-yellow);
+    text-transform: uppercase;
+}
